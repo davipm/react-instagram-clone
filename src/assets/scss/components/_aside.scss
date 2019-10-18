@@ -1,0 +1,34 @@
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  top: 150px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  &--stick {
+    position: fixed;
+    width: 100%;
+    max-width: 325.5px;
+    top: 5rem;
+    margin-left: 37.8rem;
+  }
+}
+
+.aside__user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  &--info {
+    display: block;
+    margin-left: 1rem;
+    margin-bottom: 0;
+
+    > strong {
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+}

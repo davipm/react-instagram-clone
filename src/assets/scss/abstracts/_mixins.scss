@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// mixins
+@mixin flex-content($content: flex-start, $items: center) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $content;
+  align-items: $items;
+}
+
+
+// placeholder
+%user-select-none {
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+%block-content {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+

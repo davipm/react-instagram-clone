@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: normal;
+  color: black;
+  text-align: left;
+  background-color: #fafafa;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  border-style: none;
+  transition: all .15s ease-in-out;
+}

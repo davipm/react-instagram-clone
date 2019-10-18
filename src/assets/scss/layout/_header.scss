@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+  display: block;
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-bottom: 1px solid #dbdbdb;
+  z-index: 10;
+  transition: all .15s ease-in-out;
+
+  &--stick {
+    padding: 10px;
+
+    img,
+    .divisor {
+      opacity: 0;
+    }
+  }
+}
+
+.header__logo {
+  @include flex-content();
+  flex: auto;
+  cursor: pointer;
+}
+
+.header__form {
+  display: block;
+  position: relative;
+  width: 215px;
+}
+
+.header__menu {
+  flex: auto;
+}

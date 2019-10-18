@@ -1,0 +1,49 @@
+
+.user {
+  @extend %block-content;
+  @include flex-content();
+  border: none;
+  background-color: transparent;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.user__img-list {
+  width: 44px;
+  margin-right: 10px;
+  padding: 2px;
+  position: relative;
+  z-index: 1;
+
+  > img {
+    padding: 2px;
+    background-color: white;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    background-image: linear-gradient(to top, red, orange);
+    z-index: -1;
+  }
+}
+
+.user__name {
+  padding-top: 6px;
+  font-size: 14px;
+  line-height: .8;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.user__info {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  color: #999999;
+}

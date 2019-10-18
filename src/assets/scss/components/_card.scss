@@ -1,0 +1,86 @@
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 3rem;
+  width: 100%;
+  min-width: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  border: 1px solid #dbdbdb;
+  background-color: white;
+
+  &--no-border {
+    border: none;
+  }
+}
+
+.card__header {
+  @include flex-content(space-between);
+  padding: 10px;
+}
+
+.card__img {
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 15px;
+
+  &--post {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card__user {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.card__footer {
+  padding: 10px;
+}
+
+.card__likes__content {
+  @include flex-content(space-between);
+}
+
+.card__form {
+  position: relative;
+}
+
+.card__publish {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding-top: 5px;
+  font-size: 14px;
+  color: #3897f0;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:disabled {
+    @extend %user-select-none;
+    cursor: auto;
+    opacity: .5;
+  }
+}
+
+.card__input {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  border: none;
+  border-top: 1px solid #dbdbdb;
+
+  &:focus {
+    outline: none;
+  }
+}

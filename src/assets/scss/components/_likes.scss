@@ -1,0 +1,21 @@
+
+// likes
+.likes {
+  @include flex-content(space-between);
+}
+
+.likes__item {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.likes__count {
+  display: block;
+  position: relative;
+  font-size: 13px;
+  padding: 10px 0;
+
+  img {
+    margin-right: 10px;
+  }
+}
