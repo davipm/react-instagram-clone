@@ -31,7 +31,11 @@ export default function Header() {
             <img src={logo} alt="Logo" className="logo" />
           </div>
           <div className="header__form">
-            <input type="text" placeholder="Search" className="form-control" />
+            <input
+              type="text"
+              placeholder="Search"
+              className="form-control"
+            />
           </div>
           <div className="header__menu">
             <Menu />

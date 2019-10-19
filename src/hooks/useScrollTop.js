@@ -6,7 +6,7 @@ export default function useScrollTop(value) {
   useEffect(() => {
     window.addEventListener('scroll', scrollUpdate);
     return () => window.removeEventListener('scroll', scrollUpdate);
-  }, []);
+  });
 
   const scrollUpdate = () => {
     if (window.scrollY > value) {

@@ -1,35 +1,37 @@
 import React from 'react';
 
-export default function History({ title, items = [] }) {
-  if (items.length >= 0) {
-    return (
-      <div className="card history">
-        <div className="history__header">
-          <div className="history__title">
-            {title}
-          </div>
-          <div className="history__subtitle">
-            See all
-          </div>
-        </div>
+/**
+ * @return {null}
+ */
 
-        <div className="history__content">
-          <ul className="history-list">
-            {items.map(item => (
-              <li key={item.id} className="history-list__item">
-                <User
-                  name={item.user_name}
-                  info={item.time}
-                />
-              </li>
-            ))}
-          </ul>
+export default function History({ title, items = [] }) {
+  if (items.length < 0) return null;
+
+  return (
+    <div className="card history">
+      <div className="history__header">
+        <div className="history__title">
+          {title}
+        </div>
+        <div className="history__subtitle">
+          See all
         </div>
       </div>
-    )
-  } else {
-    return <div/>;
-  }
+
+      <div className="history__content">
+        <ul className="history-list">
+          {items.map(item => (
+            <li key={item.id} className="history-list__item">
+              <User
+                name={item.user_name}
+                info={item.time}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
 }
 
 const User = ({ name, info }) => (

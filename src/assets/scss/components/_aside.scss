@@ -1,4 +1,5 @@
 
+// default aside
 .aside {
   display: flex;
   flex-direction: column;
@@ -16,6 +17,7 @@
   }
 }
 
+// aside for user
 .aside__user {
   display: flex;
   align-items: center;

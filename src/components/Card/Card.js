@@ -47,7 +47,7 @@ export default function Card() {
           />
           <span>Curtido por <strong>Davi Pereira</strong> e <strong>outras {likes} pessoas</strong></span>
 
-          {commentList.length ? <Comments comments={commentList} /> : ''}
+          {commentList.length ? <Comments comments={commentList} /> : null}
         </div>
       </div>
 

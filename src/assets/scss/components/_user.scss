@@ -17,7 +17,7 @@
 
   > img {
     padding: 2px;
-    background-color: white;
+    background-color: $mainWhite;
   }
 
   &::before {
@@ -28,7 +28,7 @@
     bottom: 0;
     left: 0;
     border-radius: 50%;
-    background-image: linear-gradient(to top, red, orange);
+    background-image: $bgHistory;
     z-index: -1;
   }
 }
