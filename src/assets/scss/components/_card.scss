@@ -27,8 +27,11 @@
   margin-right: 15px;
 
   &--post {
+    object-fit: cover;
     width: 100%;
+    max-width: 614px;
     height: auto;
+    max-height: 614px;
   }
 }
 

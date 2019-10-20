@@ -1,8 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
 
 .menu__list {
   @include flex-content(flex-end);
   margin: 0;
   padding: 0;
+
+  &--footer {
+    justify-content: flex-start;
+
+    a {
+      font-size: 12px;
+      font-weight: 600;
+      color: #003569;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .menu__item {
+      padding: 0;
+      margin-right: 0;
+      margin-left: 15px;
+    }
+  }
 }
 
 .menu__item {

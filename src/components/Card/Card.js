@@ -8,6 +8,7 @@ let COMMENT_ID = 0;
 export default function Card() {
   const [comment, setComment] = useState('');
   const [commentList, setCommentList] = useState([]);
+  const [liked, setLiked] = useState(false);
 
   const likes = 165;
 
@@ -37,7 +38,12 @@ export default function Card() {
       </div>
 
       <div className="card__footer">
-        <CardLikes />
+        <CardLikes
+          isLiked={liked}
+          handleClick={() => {
+            setLiked(!liked);
+          }}
+        />
 
         <div className="likes__count">
           <img

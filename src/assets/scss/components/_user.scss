@@ -6,6 +6,10 @@
   background-color: transparent;
   margin-bottom: 10px;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .user__img-list {

@@ -5,8 +5,10 @@ import {
   Route,
 } from "react-router-dom";
 import Header from './components/Header';
+import Footer from "./components/Footer/Footer";
 import Feed from './Pages/Feed';
 import Explore from "./Pages/Explore";
+import Profile from './Pages/Profile';
 import NotMach from "./Pages/404";
 
 function App() {
@@ -18,15 +20,18 @@ function App() {
         <Route exact path="/">
           <Feed />
         </Route>
-        <Route path="/explore">
+        <Route path="/explore/">
           <Explore />
+        </Route>
+        <Route path="/profile/">
+          <Profile />
         </Route>
         <Route path="*">
           <NotMach />
         </Route>
       </Switch>
 
-
+      <Footer />
     </Router>
   );
 }

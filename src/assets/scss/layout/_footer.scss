@@ -1,3 +1,20 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.footer {
+  padding: 30px 0;
+  display: block;
+  position: relative;
+
+  .row {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer__dev {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 0;
+}

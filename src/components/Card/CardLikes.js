@@ -1,12 +1,24 @@
 import React from 'react';
-import { FaRegHeart, FaRegComment, FaUpload, FaRegClone } from "react-icons/fa";
+import { 
+  FaRegHeart,
+  FaRegComment,
+  FaUpload,
+  FaRegClone,
+  FaHeart
+} from "react-icons/fa";
 
-const CardLikes = () => (
+const CardLikes = ({ handleClick, isLiked }) => (
   <div className="card__likes__content">
     <div className="card__likes">
       <ul className="likes">
-        <li className="likes__item">
-          <FaRegHeart size={20} />
+        <li
+          className="likes__item"
+          onClick={handleClick}
+        >
+          {!isLiked
+            ? <FaRegHeart size={20} />
+            : <FaHeart size={20} color="red" />
+          }
         </li>
         <li className="likes__item">
           <FaRegComment size={20} />

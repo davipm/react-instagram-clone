@@ -3,7 +3,7 @@ import Card from "../components/Card";
 import Aside from "../components/Aside";
 
 export default function Feed() {
-  const feed = [1,2,3,4,5,6,7,8];
+  const feed = [1, 2, 3, 4, 5, 6, 7, 8];
 
   return (
     <section className="container">

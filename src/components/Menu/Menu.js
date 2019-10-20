@@ -8,7 +8,7 @@ export default function Menu() {
     <nav className="menu">
       <ul className="menu__list">
         <li className="menu__item">
-          <Link to="/explore" className="menu__link">
+          <Link to="/explore/" className="menu__link">
             <FiCompass size={25} />
           </Link>
         </li>
@@ -16,7 +16,9 @@ export default function Menu() {
           <FaRegHeart size={25} />
         </li>
         <li className="menu__item">
-          <FaRegUser size={25} />
+          <Link to="/profile/" className="menu__link">
+            <FaRegUser size={25} />
+          </Link>
         </li>
       </ul>
     </nav>

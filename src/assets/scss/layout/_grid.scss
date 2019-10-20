@@ -1,3 +1,6 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
 
 .container {
   display: block;
@@ -5,6 +8,7 @@
   padding-right: 15px;
   padding-left: 15px;
   width: 100%;
+  min-height: 89%;
   max-width: 1010px;
   margin: auto;
 }
