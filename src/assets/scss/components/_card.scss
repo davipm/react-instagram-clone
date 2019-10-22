@@ -14,6 +14,11 @@
   &--no-border {
     border: none;
   }
+
+  @media (max-width: 576px) {
+    border-right: 0;
+    border-left: 0;
+  }
 }
 
 .card__header {
@@ -32,6 +37,13 @@
     max-width: 614px;
     height: auto;
     max-height: 614px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: inherit;
+    }
   }
 }
 

@@ -23,6 +23,10 @@
       margin-right: 0;
       margin-left: 15px;
     }
+
+    @media (max-width: 576px) {
+      justify-content: center;
+    }
   }
 }
 
@@ -35,4 +39,14 @@
   display: block;
   position: relative;
   color: black;
+}
+
+@media (max-width: 576px) {
+  .menu__item {
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }

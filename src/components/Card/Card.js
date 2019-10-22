@@ -5,7 +5,7 @@ import CardLikes from "./CardLikes";
 
 let COMMENT_ID = 0;
 
-export default function Card() {
+export default function Card({ userImg, contentImg, userName }) {
   const [comment, setComment] = useState('');
   const [commentList, setCommentList] = useState([]);
   const [liked, setLiked] = useState(false);
@@ -27,11 +27,11 @@ export default function Card() {
 
   return (
     <div className="card">
-      <CardHeader />
+      <CardHeader userImg={userImg} userName={userName} />
 
       <div className="card__content">
         <img
-          src="https://via.placeholder.com/614x614"
+          src={contentImg}
           alt="Post"
           className="card__img--post"
         />
@@ -47,7 +47,9 @@ export default function Card() {
 
         <div className="likes__count">
           <img
-            src="https://via.placeholder.com/20x20"
+            src={userImg}
+            width={20}
+            height={20}
             alt="User Liked"
             className="img-rounded"
           />

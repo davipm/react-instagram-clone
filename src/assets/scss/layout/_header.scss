@@ -13,7 +13,7 @@
   transition: all .15s ease-in-out;
 
   &--stick {
-    padding: 10px;
+    padding: 10px!important;
 
     img,
     .divisor {
@@ -36,4 +36,14 @@
 
 .header__menu {
   flex: auto;
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 20px 10px;
+  }
+
+  .header__form {
+    display: none;
+  }
 }

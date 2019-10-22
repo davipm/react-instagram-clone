@@ -4,4 +4,9 @@
   display: block;
   position: relative;
   padding: 140px 25px;
+
+  @media (max-width: 576px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
