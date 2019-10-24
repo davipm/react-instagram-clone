@@ -47,9 +47,12 @@ const User = ({ name, info }) => (
       <h3 className="user__name">
         {name}
       </h3>
+
       <span className="user__info">
         {info}{ !isNaN(info) ? 'h ago': '' }
       </span>
+
+      {isNaN(info) && <a href="#!follow" className="user__follow">Seguir</a>}
     </div>
   </button>
 );

@@ -6,31 +6,36 @@ import {
   Route,
 } from "react-router-dom";
 import Header from './components/Header';
-import Footer from "./components/Footer/Footer";
-import Feed from './Pages/Feed';
-import Explore from "./Pages/Explore";
-import Profile from './Pages/Profile';
-import NotMach from "./Pages/404";
+import Feed from './pages/Feed';
+import Explore from "./pages/Explore";
+import Profile from './pages/Profile';
+import NotMach from "./pages/404";
 
 function App() {
   return (
     <Router>
       <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="theme-color" content="#FFFFFF" />
         <title>Instagram</title>
         <meta name="title" content="Instagram" />
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta name="description" content="Instagram app clone" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://unnatural-current.surge.sh/" />
         <meta property="og:title" content="Instagram" />
-        <meta property="og:description" content="Web site created using create-react-app" />
+        <meta property="og:description" content="Instagram app clone" />
         <meta property="og:image" content="" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://unnatural-current.surge.sh/" />
         <meta property="twitter:title" content="Instagram" />
-        <meta property="twitter:description" content="Web site created using create-react-app" />
+        <meta property="twitter:description" content="Instagram app clone" />
         <meta property="twitter:image" content="" />
+
+        <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+
       </Helmet>
 
       <Header />
@@ -50,7 +55,6 @@ function App() {
         </Route>
       </Switch>
 
-      <Footer />
     </Router>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { FaInstagram } from 'react-icons/fa';
 import { useHistory } from "react-router-dom";
 import Menu from "../Menu/Menu";
+import HeaderForm from "./HeaderForm";
 
 import useScrollTop from "../../hooks/useScrollTop";
 
@@ -26,20 +27,14 @@ export default function Header() {
               history.push('/');
             }}
           >
-            <FaInstagram size={30} />
+            <FaInstagram size={28} />
             <div className="divisor" />
             <img src={logo} alt="Logo" className="logo" />
           </div>
-          <div className="header__form">
-            <input
-              type="text"
-              placeholder="Search"
-              className="form-control"
-            />
-          </div>
-          <div className="header__menu">
-            <Menu />
-          </div>
+
+          <HeaderForm />
+
+          <Menu />
         </div>
       </div>
     </header>

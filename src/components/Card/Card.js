@@ -12,9 +12,8 @@ export default function Card({ userImg, contentImg, userName }) {
 
   const likes = 165;
 
-  function addComment(event) {
-    event.preventDefault();
-
+  function addComment(/*event*/) {
+    //event.preventDefault();
     setCommentList([
       ...commentList, {
         comment: comment,
@@ -25,11 +24,16 @@ export default function Card({ userImg, contentImg, userName }) {
     setComment('');
   }
 
+  const handleLiked = () => setLiked(!liked);
+
   return (
     <div className="card">
       <CardHeader userImg={userImg} userName={userName} />
 
-      <div className="card__content">
+      <div
+        className="card__content"
+        onDoubleClick={handleLiked}
+      >
         <img
           src={contentImg}
           alt="Post"
@@ -40,9 +44,7 @@ export default function Card({ userImg, contentImg, userName }) {
       <div className="card__footer">
         <CardLikes
           isLiked={liked}
-          handleClick={() => {
-            setLiked(!liked);
-          }}
+          handleClick={handleLiked}
         />
 
         <div className="likes__count">
@@ -65,6 +67,11 @@ export default function Card({ userImg, contentImg, userName }) {
           onChange={(event) => {
             setComment(event.target.value);
           }}
+          onKeyUp={event => {
+            if (event.keyCode === 13 && comment.length > 0) {
+              addComment();
+            }
+          }}
           name="comment"
           type="text"
           className="card__input"
@@ -73,7 +80,10 @@ export default function Card({ userImg, contentImg, userName }) {
 
         <button
           aria-label="button comment"
-          onClick={addComment}
+          onClick={event => {
+            event.preventDefault();
+            addComment();
+          }}
           className="card__publish"
           disabled={!comment.length > 0}
         >

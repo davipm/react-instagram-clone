@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 import History from "../History";
 
 import useScrollTop from "../../hooks/useScrollTop";
 
 export default function Aside() {
-  const stickAside = useScrollTop(100);
+  const stickAside = useScrollTop(200);
 
   const history = [
     { user_name: 'davi_pereira', time: 10, id: 1},
@@ -23,6 +25,19 @@ export default function Aside() {
     { user_name: 'davi_pereira', time: 'Segue você', id: 1},
     { user_name: 'davi_pereira', time: 'Amigo no Facebook', id: 2},
     { user_name: 'davi_pereira', time: 'Amigo no Facebook', id: 3 },
+  ];
+
+  const items = [
+    { title: 'Sobre nós', url: '/' },
+    { title: 'Suporte', url: '/' },
+    { title: 'Imprensa', url: '/' },
+    { title: 'API', url: '/' },
+    { title: 'Carreiras', url: '/' },
+    { title: 'Privacidade', url: '/' },
+    { title: 'Termos', url: '/' },
+    { title: 'Diretório', url: '/' },
+    { title: 'Perfis', url: '/' },
+    { title: 'Hashtags', url: '/' },
   ];
 
   let className = 'aside';
@@ -48,6 +63,23 @@ export default function Aside() {
 
       <History title="History" items={history} />
       <History title="Sugestões para você" items={suggestions} />
+
+      <nav className="aside-nav">
+        <ul className="aside-menu__menu">
+          {items.map(item => (
+            <li key={item.title} className="aside-nav__item">
+              <Link to={item.url} className="aside-nav__link">
+                {item.title}
+              </Link>
+            </li>
+          ))}
+          <li className="aside-nav__item">
+            <span className="language-select">
+              IDIOMA
+            </span>
+          </li>
+        </ul>
+      </nav>
     </aside>
   )
 }
