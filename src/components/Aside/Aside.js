@@ -5,41 +5,10 @@ import History from "../History";
 
 import useScrollTop from "../../hooks/useScrollTop";
 
+import { suggestions, items, history } from "./asideData";
+
 export default function Aside() {
-  const stickAside = useScrollTop(200);
-
-  const history = [
-    { user_name: 'davi_pereira', time: 10, id: 1},
-    { user_name: 'davi_pereira', time: 10, id: 2},
-    { user_name: 'davi_pereira', time: 10, id: 3 },
-    { user_name: 'davi_pereira', time: 10, id: 4 },
-    { user_name: 'davi_pereira', time: 10, id: 5 },
-    { user_name: 'davi_pereira', time: 10, id: 6 },
-    { user_name: 'davi_pereira', time: 10, id: 7 },
-    { user_name: 'davi_pereira', time: 10, id: 8 },
-    { user_name: 'davi_pereira', time: 10, id: 9 },
-    { user_name: 'davi_pereira', time: 10, id: 10 },
-  ];
-
-  const suggestions = [
-    { user_name: 'davi_pereira', time: 'Segue você', id: 1},
-    { user_name: 'davi_pereira', time: 'Amigo no Facebook', id: 2},
-    { user_name: 'davi_pereira', time: 'Amigo no Facebook', id: 3 },
-  ];
-
-  const items = [
-    { title: 'Sobre nós', url: '/' },
-    { title: 'Suporte', url: '/' },
-    { title: 'Imprensa', url: '/' },
-    { title: 'API', url: '/' },
-    { title: 'Carreiras', url: '/' },
-    { title: 'Privacidade', url: '/' },
-    { title: 'Termos', url: '/' },
-    { title: 'Diretório', url: '/' },
-    { title: 'Perfis', url: '/' },
-    { title: 'Hashtags', url: '/' },
-  ];
-
+  const stickAside = useScrollTop(45);
   let className = 'aside';
 
   if (stickAside) {

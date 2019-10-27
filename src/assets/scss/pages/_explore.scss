@@ -1,0 +1,42 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper for $.
+// -----------------------------------------------------------------------------
+
+.slide-content {
+  display: block;
+  position: relative;
+  margin-bottom: 4.5rem;
+}
+
+.slide-content__title {
+  @include flex-content(space-between);
+  margin-bottom: 1.5rem;
+  font-size: 14px;
+  color: #999999;
+  font-weight: 600;
+  text-align: left;
+
+  a {
+    color: #3897f0;
+    text-decoration: none;
+  }
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: black!important;
+  opacity: 1!important;
+}
+
+.explore-content {
+  display: block;
+  position: relative;
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: #999999;
+    font-weight: 600;
+    text-align: left;
+  }
+}

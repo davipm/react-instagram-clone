@@ -8,7 +8,10 @@ export default function Explore() {
       <section className="container">
         <div className="content">
           <CarouselUsers />
-          <p>TODO: explore page</p>
+          {/* page content */}
+          <div className="explore-content">
+            <h2 className="explore-content__title">Explorar</h2>
+          </div>
         </div>
       </section>
 

@@ -9,11 +9,7 @@ export default function useScrollTop(value) {
   });
 
   const scrollUpdate = () => {
-    if (window.scrollY > value) {
-      setState(true);
-    } else {
-      setState(false);
-    }
+    setState(window.scrollY > value);
   };
 
   return state;

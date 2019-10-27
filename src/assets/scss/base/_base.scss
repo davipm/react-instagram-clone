@@ -17,7 +17,7 @@ body,
 html,
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: normal;
   font-style: normal;
   color: black;
@@ -27,6 +27,7 @@ body {
 }
 
 p {
+  margin-top: 0;
   margin-bottom: 1rem;
 }
 

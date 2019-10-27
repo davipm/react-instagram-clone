@@ -1,45 +1,28 @@
 import React from 'react';
 import Slider from "react-slick";
-import Card from "../../Card";
+import SuggestionCard from "../../Card/SuggestionCard";
 import { settings } from "./carouselSettings";
 
-function CarouselUsers() {
+function CarouselUsers(props) {
   return (
-    <div>
-      <Slider {...settings}>
-        <div>
-          <Card />
-        </div>
-        <div>
-          <Card />
-        </div>
-        <div>
-          <Card />
-        </div>
-        <div>
-          <Card />
-        </div>
-        <div>
-          <Card />
-        </div>
-        <div>
-          <Card />
-        </div>
-        <div>
-          <Card />
-        </div>
-        <div>
-          <Card />
-        </div>
-        <div>
-          <Card />
-        </div>
-        <div>
-          <Card />
-        </div>
-        <div>
-          <Card />
-        </div>
+    <div className="slide-content">
+      <h2 className="slide-content__title">
+        Encontre pessoas
+        <a href="#!top">Ver tudo</a>
+      </h2>
+
+      <Slider {...settings} {...props}>
+        <SuggestionCard />
+        <SuggestionCard />
+        <SuggestionCard />
+        <SuggestionCard />
+        <SuggestionCard />
+        <SuggestionCard />
+        <SuggestionCard />
+        <SuggestionCard />
+        <SuggestionCard />
+        <SuggestionCard />
+        <SuggestionCard />
       </Slider>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from "../components/Card";
 import Aside from "../components/Aside";
+import CarouselUsers from "../components/Carousel/CarouselUsers";
 
 export default function Feed() {
   const items = [
@@ -31,7 +32,10 @@ export default function Feed() {
         <div className="row">
           <div className="feed">
             {items.map(item => (
-              <Card key={item.id} {...item} />
+              <>
+                <Card key={item.id} {...item} />
+                {item.id === 2 && <CarouselUsers slidesToShow={3} />}
+              </>
             ))}
           </div>
 
