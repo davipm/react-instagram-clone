@@ -5,10 +5,15 @@ import { settings } from "./carouselSettings";
 
 function CarouselUsers(props) {
   return (
-    <div className="slide-content">
+    <div className="slide-content" style={{...props}}>
       <h2 className="slide-content__title">
         Encontre pessoas
-        <a href="#!top">Ver tudo</a>
+        <a
+          href="#!top"
+          onClick={event => event.preventDefault()}
+        >
+          Ver tudo
+        </a>
       </h2>
 
       <Slider {...settings} {...props}>

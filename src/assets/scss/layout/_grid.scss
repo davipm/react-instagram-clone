@@ -17,8 +17,18 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding-right: -15px;
-  padding-left: -15px;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+[class*="col-"] {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-md-4 {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
 }
 
 @media (max-width: 576px) {

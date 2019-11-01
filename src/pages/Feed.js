@@ -34,7 +34,14 @@ export default function Feed() {
             {items.map(item => (
               <>
                 <Card key={item.id} {...item} />
-                {item.id === 2 && <CarouselUsers slidesToShow={3} />}
+                {item.id === 2 && (
+                  <CarouselUsers
+                    padding="10px 30px 40px"
+                    background-color="white"
+                    border="1px solid #efefef"
+                    slidesToShow={3}
+                  />
+                )}
               </>
             ))}
           </div>
