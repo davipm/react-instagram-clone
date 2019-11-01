@@ -5,6 +5,8 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import ScrollToTop from "./utils/backToTop";
+
 import Header from './components/Header';
 import Feed from './pages/Feed';
 import Explore from "./pages/Explore";
@@ -14,6 +16,8 @@ import NotMach from "./pages/404";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
+
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="theme-color" content="#FFFFFF" />
