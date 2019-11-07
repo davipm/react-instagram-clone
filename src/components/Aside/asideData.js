@@ -1,5 +1,5 @@
 
-export const history = [
+export const historyData = [
   { user_name: 'davi_pereira', time: 10, id: 1},
   { user_name: 'davi_pereira', time: 10, id: 2},
   { user_name: 'davi_pereira', time: 10, id: 3 },
