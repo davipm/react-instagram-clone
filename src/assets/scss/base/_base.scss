@@ -37,3 +37,39 @@ img {
   border-style: none;
   transition: all .15s ease-in-out;
 }
+
+// tabs
+ul.tab-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px 0;
+  border-top: 1px solid #efefef;
+}
+
+.tab-list-item {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  text-align: center;
+  list-style: none;
+  margin-right: 25px;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.tab-list-active {
+  background-color: white;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -11px;
+    width: 85%;
+    height: 1px;
+    background-color: black;
+  }
+}

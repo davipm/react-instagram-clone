@@ -1,0 +1,52 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper for $.
+// -----------------------------------------------------------------------------
+
+.profile-header {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+  padding: 0 50px;
+
+  &__name {
+    font-weight: 300;
+  }
+}
+
+.profile-header__img-content {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+
+.profile-header__content {
+  flex: 1;
+  max-width: 100%;
+}
+
+.user__img-list--profile {
+  width: 100%;
+  height: auto;
+
+  .img-rounded {
+    position: relative;
+    top: 3px;
+    left: 2px;
+    padding: 5px;
+  }
+
+  &::before {
+    width: 168px;
+    height: 168px;
+  }
+}
+
+ul.profile-follows__list {
+  @include flex-content();
+  padding: 20px 0;
+  margin: 0;
+}
+
+.profile-follows__item {
+  margin-right: 40px;
+}
