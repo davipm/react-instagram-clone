@@ -32,8 +32,22 @@
 }
 
 @media (max-width: 576px) {
-  .container {
-    padding-right: 0;
-    padding-left: 0;
+  [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .col-md-4--inline {
+    flex: 0 0 32.5%;
+    max-width: 32.5%;
+    padding: 0;
+
+    .card__overlay {
+      display: none;
+    }
+
+    .card {
+      margin-bottom: 3px;
+    }
   }
 }

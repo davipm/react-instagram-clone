@@ -47,18 +47,18 @@ export default function Profile() {
             <div className="explore-content__card-group">
               <Tabs>
                 <div label="Publicações">
-                  <div className="row">
+                  <div className="row flex-space-between--mobile">
                     {items.map(item => (
-                      <div key={item} className="col-md-4">
+                      <div key={item} className="col-md-4 col-md-4--inline">
                         <CardImage />
                       </div>
                     ))}
                   </div>
                 </div>
                 <div label="Marcado">
-                  <div className="row">
+                  <div className="row flex-space-between--mobile">
                     {items.map(item => (
-                      <div key={item} className="col-md-4">
+                      <div key={item} className="col-md-4 col-md-4--inline">
                         <CardImage />
                       </div>
                     ))}

@@ -6,6 +6,10 @@
   display: block;
   position: relative;
   margin-bottom: 4.5rem;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
 }
 
 .slide-content__title {

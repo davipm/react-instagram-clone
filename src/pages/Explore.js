@@ -16,9 +16,9 @@ export default function Explore() {
             <h2 className="explore-content__title">Explorar</h2>
 
             <div className="explore-content__card-group">
-              <div className="row">
+              <div className="row flex-space-between--mobile ">
                 {items.map(item => (
-                  <div key={item} className="col-md-4">
+                  <div key={item} className="col-md-4 col-md-4--inline">
                     <CardImage />
                   </div>
                 ))}
