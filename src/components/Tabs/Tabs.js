@@ -36,3 +36,11 @@ export default function Tabs({ children = [] }) {
     </div>
   );
 }
+
+export function TabsItem({ children, label }) {
+  return (
+    <div data-label={label} id="test">
+      { children }
+    </div>
+  )
+}

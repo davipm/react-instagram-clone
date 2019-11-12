@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from "../components/Footer/Footer";
 import CardImage from "../components/Card/CardImage";
-import Tabs from "../components/Tabs";
+import Tabs, { TabsItem } from "../components/Tabs";
 
 export default function Profile() {
   const items = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
@@ -46,7 +46,7 @@ export default function Profile() {
 
             <div className="explore-content__card-group">
               <Tabs>
-                <div label="Publicações">
+                <TabsItem label="Publicações">
                   <div className="row flex-space-between--mobile">
                     {items.map(item => (
                       <div key={item} className="col-md-4 col-md-4--inline">
@@ -54,8 +54,8 @@ export default function Profile() {
                       </div>
                     ))}
                   </div>
-                </div>
-                <div label="Marcado">
+                </TabsItem>
+                <TabsItem label="Marcado">
                   <div className="row flex-space-between--mobile">
                     {items.map(item => (
                       <div key={item} className="col-md-4 col-md-4--inline">
@@ -63,7 +63,7 @@ export default function Profile() {
                       </div>
                     ))}
                   </div>
-                </div>
+                </TabsItem>
               </Tabs>
             </div>
           </div>
